@@ -8,7 +8,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 
 df = pd.read_csv(
-    'mockup.csv')
+    'deforestation.csv')
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
