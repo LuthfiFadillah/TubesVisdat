@@ -1,19 +1,613 @@
 province,tc,biomass,co2,year
-Indonesia,744917,179.6,2001
-Indonesia,856270,201.96,2002
-Indonesia,545528,2003
-Indonesia,1291467,2004
-Indonesia,1183802,2005
-Indonesia,1434724,2006
-Indonesia,1389495,2007
-Indonesia,1398066,2008
-Indonesia,1947257,2009
-Indonesia,1280641,2010
-Indonesia,1545060,2011
-Indonesia,2262504,2012
-Indonesia,1140308,2013
-Indonesia,1896006,2014
-Indonesia,1747954,2015
-Indonesia,2424326,2016
-Indonesia,1301946,2017
-Indonesia,1219663,2018
+Indonesia,744917,179.6,329.27,2001
+Indonesia,856270,201.96,370.26,2002
+Indonesia,545528,129.82,238.01,2003
+Indonesia,1291467,299.21,548.56,2004
+Indonesia,1183802,271.99,498.66,2005
+Indonesia,1434724,321.21,588.88,2006
+Indonesia,1389495,302.03,553.71,2007
+Indonesia,1398066,314.67,576.89,2008
+Indonesia,1947257,434.22,796.08,2009
+Indonesia,1280641,294.13,539.23,2010
+Indonesia,1545060,355.29,651.37,2011
+Indonesia,2262504,508.36,931.99,2012
+Indonesia,1140308,262.22,480.74,2013
+Indonesia,1896006,416.17,762.98,2014
+Indonesia,1747954,386.32,708.26,2015
+Indonesia,2424326,508.15,931.61,2016
+Indonesia,1301946,279.22,511.91,2017
+Indonesia,1219663,261.83,480.02,2018
+Aceh,18291,4.48,8.21,2001
+Aceh,10970,2.76,5.06,2002
+Aceh,11824,3.2,5.87,2003
+Aceh,19175,4.32,7.92,2004
+Aceh,26531,5.52,10.12,2005
+Aceh,21323,5.07,9.3,2006
+Aceh,24197,5.83,10.69,2007
+Aceh,36772,8.99,16.48,2008
+Aceh,69173,15.9,29.14,2009
+Aceh,40811,9.51,17.44,2010
+Aceh,47530,10.8,19.81,2011
+Aceh,49480,11.16,20.47,2012
+Aceh,41432,9.02,16.54,2013
+Aceh,58626,13.1,24.01,2014
+Aceh,34018,7.94,14.55,2015
+Aceh,50134,11.27,20.67,2016
+Aceh,45866,10.28,18.85,2017
+Aceh,46162,10.48,19.22,2018
+Bali,424,0.11,0.2,2001
+Bali,313,0.08,0.14,2002
+Bali,180,0.05,0.09,2003
+Bali,372,0.09,0.16,2004
+Bali,237,0.06,0.11,2005
+Bali,515,0.13,0.23,2006
+Bali,505,0.12,0.22,2007
+Bali,231,0.06,0.11,2008
+Bali,375,0.09,0.17,2009
+Bali,199,0.05,0.09,2010
+Bali,217,0.05,0.1,2011
+Bali,747,0.17,0.32,2012
+Bali,396,0.07,0.13,2013
+Bali,909,0.18,0.32,2014
+Bali,133,0.03,0.05,2015
+Bali,156,0.04,0.07,2016
+Bali,264,0.06,0.1,2017
+Bali,304,0.08,0.14,2018
+Bangka Belitung,13918,2.82,5.18,2001
+Bangka Belitung,11253,2.2,4.04,2002
+Bangka Belitung,7126,1.35,2.47,2003
+Bangka Belitung,21993,4.4,8.08,2004
+Bangka Belitung,19865,3.78,6.93,2005
+Bangka Belitung,20256,4.03,7.4,2006
+Bangka Belitung,23249,4.4,8.07,2007
+Bangka Belitung,22702,4.16,7.62,2008
+Bangka Belitung,63955,11.76,21.56,2009
+Bangka Belitung,23209,4.3,7.88,2010
+Bangka Belitung,32417,5.8,10.63,2011
+Bangka Belitung,39473,7.12,13.06,2012
+Bangka Belitung,17586,3.21,5.88,2013
+Bangka Belitung,41287,7.21,13.22,2014
+Bangka Belitung,41312,7.08,12.97,2015
+Bangka Belitung,58238,9.34,17.13,2016
+Bangka Belitung,25572,4.42,8.1,2017
+Bangka Belitung,22440,3.66,6.72,2018
+Banten,1056,0.25,0.45,2001
+Banten,1762,0.41,0.75,2002
+Banten,293,0.07,0.12,2003
+Banten,1406,0.32,0.59,2004
+Banten,546,0.12,0.23,2005
+Banten,1940,0.4,0.73,2006
+Banten,1063,0.23,0.41,2007
+Banten,929,0.2,0.37,2008
+Banten,2755,0.62,1.13,2009
+Banten,1634,0.36,0.66,2010
+Banten,2329,0.48,0.88,2011
+Banten,3288,0.74,1.35,2012
+Banten,1830,0.37,0.68,2013
+Banten,2276,0.46,0.85,2014
+Banten,2664,0.52,0.95,2015
+Banten,1972,0.39,0.72,2016
+Banten,3497,0.68,1.25,2017
+Banten,3400,0.67,1.23,2018
+Bengkulu,14211,3.89,7.13,2001
+Bengkulu,10434,2.79,5.12,2002
+Bengkulu,8112,2.27,4.16,2003
+Bengkulu,26004,7,12.84,2004
+Bengkulu,13153,3.55,6.51,2005
+Bengkulu,23604,5.95,10.91,2006
+Bengkulu,17596,4.57,8.38,2007
+Bengkulu,22373,5.74,10.53,2008
+Bengkulu,18773,5.03,9.21,2009
+Bengkulu,16026,4.08,7.48,2010
+Bengkulu,24577,6.55,12.01,2011
+Bengkulu,27787,7.48,13.72,2012
+Bengkulu,14164,3.74,6.86,2013
+Bengkulu,20339,5.17,9.47,2014
+Bengkulu,20222,5.29,9.7,2015
+Bengkulu,24405,6.24,11.44,2016
+Bengkulu,27270,6.97,12.78,2017
+Bengkulu,24649,6.21,11.38,2018
+Gorontalo,3505,0.94,1.72,2001
+Gorontalo,8029,2.18,3.99,2002
+Gorontalo,2810,0.8,1.47,2003
+Gorontalo,6954,1.83,3.36,2004
+Gorontalo,4246,1.18,2.16,2005
+Gorontalo,5258,1.4,2.57,2006
+Gorontalo,4333,1.13,2.08,2007
+Gorontalo,1796,0.45,0.83,2008
+Gorontalo,11272,2.73,5.01,2009
+Gorontalo,1570,0.38,0.69,2010
+Gorontalo,2983,0.75,1.38,2011
+Gorontalo,3932,1.08,1.98,2012
+Gorontalo,5938,1.83,3.36,2013
+Gorontalo,10362,2.92,5.35,2014
+Gorontalo,13305,3.55,6.51,2015
+Gorontalo,10923,2.93,5.38,2016
+Gorontalo,7876,1.93,3.53,2017
+Gorontalo,8016,2,3.66,2018
+Jakarta Raya,4,0,0,2001
+Jakarta Raya,0,0,0,2002
+Jakarta Raya,0,0,0,2003
+Jakarta Raya,1,0,0,2004
+Jakarta Raya,0,0,0,2005
+Jakarta Raya,4,0,0,2006
+Jakarta Raya,1,0,0,2007
+Jakarta Raya,1,0,0,2008
+Jakarta Raya,0,0,0,2009
+Jakarta Raya,2,0,0,2010
+Jakarta Raya,4,0,0,2011
+Jakarta Raya,1,0,0,2012
+Jakarta Raya,0,0,0,2013
+Jakarta Raya,0,0,0,2014
+Jakarta Raya,0,0,0,2015
+Jakarta Raya,0,0,0,2016
+Jakarta Raya,1,0,0,2017
+Jakarta Raya,0,0,0,2018
+Jambi,46983,11.58,21.24,2001
+Jambi,45176,10.41,19.09,2002
+Jambi,21651,5.03,9.22,2003
+Jambi,98274,21.27,38.99,2004
+Jambi,71349,16.87,30.93,2005
+Jambi,119967,28.33,51.93,2006
+Jambi,119806,27.21,49.88,2007
+Jambi,124832,28.79,52.77,2008
+Jambi,126069,29.26,53.65,2009
+Jambi,36729,8.97,16.44,2010
+Jambi,48972,12.46,22.84,2011
+Jambi,152627,35.99,65.98,2012
+Jambi,66812,16.11,29.54,2013
+Jambi,77526,17.81,32.64,2014
+Jambi,60769,14,25.67,2015
+Jambi,157474,35.35,64.8,2016
+Jambi,86318,18.23,33.43,2017
+Jambi,70059,14.67,26.9,2018
+Jawa Barat,6807,1.9,3.49,2001
+Jawa Barat,3858,1.01,1.85,2002
+Jawa Barat,1983,0.56,1.02,2003
+Jawa Barat,3661,0.85,1.56,2004
+Jawa Barat,2326,0.59,1.08,2005
+Jawa Barat,5248,1.22,2.24,2006
+Jawa Barat,3056,0.78,1.43,2007
+Jawa Barat,5119,1.27,2.33,2008
+Jawa Barat,2889,0.7,1.28,2009
+Jawa Barat,2635,0.64,1.18,2010
+Jawa Barat,5425,1.24,2.27,2011
+Jawa Barat,3755,0.91,1.66,2012
+Jawa Barat,2568,0.55,1.01,2013
+Jawa Barat,3765,0.8,1.46,2014
+Jawa Barat,3507,0.68,1.25,2015
+Jawa Barat,3663,0.82,1.5,2016
+Jawa Barat,5652,1.1,2.02,2017
+Jawa Barat,4513,0.86,1.57,2018
+Jawa Tengah,2684,0.73,1.34,2001
+Jawa Tengah,1902,0.47,0.86,2002
+Jawa Tengah,793,0.21,0.38,2003
+Jawa Tengah,3581,0.86,1.57,2004
+Jawa Tengah,1703,0.4,0.74,2005
+Jawa Tengah,3480,0.76,1.39,2006
+Jawa Tengah,2910,0.68,1.25,2007
+Jawa Tengah,2659,0.6,1.11,2008
+Jawa Tengah,3056,0.7,1.29,2009
+Jawa Tengah,1325,0.31,0.56,2010
+Jawa Tengah,4511,0.99,1.82,2011
+Jawa Tengah,2452,0.56,1.03,2012
+Jawa Tengah,1184,0.24,0.45,2013
+Jawa Tengah,2889,0.6,1.09,2014
+Jawa Tengah,1810,0.36,0.66,2015
+Jawa Tengah,2291,0.49,0.91,2016
+Jawa Tengah,3465,0.72,1.32,2017
+Jawa Tengah,2578,0.51,0.93,2018
+Jawa Timur,4237,1.18,2.16,2001
+Jawa Timur,4064,1.09,2,2002
+Jawa Timur,2917,0.84,1.53,2003
+Jawa Timur,6485,1.7,3.11,2004
+Jawa Timur,2828,0.71,1.3,2005
+Jawa Timur,5752,1.4,2.57,2006
+Jawa Timur,4436,1.14,2.09,2007
+Jawa Timur,4005,1.01,1.86,2008
+Jawa Timur,4289,1.05,1.93,2009
+Jawa Timur,1654,0.42,0.76,2010
+Jawa Timur,5861,1.34,2.46,2011
+Jawa Timur,8334,1.99,3.65,2012
+Jawa Timur,2754,0.53,0.98,2013
+Jawa Timur,6781,1.39,2.54,2014
+Jawa Timur,2906,0.57,1.05,2015
+Jawa Timur,3190,0.7,1.28,2016
+Jawa Timur,4716,0.91,1.67,2017
+Jawa Timur,4294,0.85,1.56,2018
+Kalimantan Barat,77994,18.62,34.13,2001
+Kalimantan Barat,96934,21.98,40.3,2002
+Kalimantan Barat,56009,13.57,24.87,2003
+Kalimantan Barat,113988,26.27,48.16,2004
+Kalimantan Barat,104665,24.16,44.3,2005
+Kalimantan Barat,131013,29.21,53.55,2006
+Kalimantan Barat,132196,28.95,53.08,2007
+Kalimantan Barat,202817,44.69,81.92,2008
+Kalimantan Barat,288805,62.38,114.37,2009
+Kalimantan Barat,152617,33.3,61.06,2010
+Kalimantan Barat,262635,57.8,105.97,2011
+Kalimantan Barat,312716,69.38,127.19,2012
+Kalimantan Barat,199623,44.05,80.75,2013
+Kalimantan Barat,291728,60.52,110.96,2014
+Kalimantan Barat,267982,55.43,101.62,2015
+Kalimantan Barat,286580,57.59,105.58,2016
+Kalimantan Barat,181487,36.58,67.06,2017
+Kalimantan Barat,159429,31.69,58.1,2018
+Kalimantan Selatan,18982,3.81,6.99,2001
+Kalimantan Selatan,24341,5.01,9.18,2002
+Kalimantan Selatan,18430,3.65,6.69,2003
+Kalimantan Selatan,41920,8.29,15.21,2004
+Kalimantan Selatan,25429,5.31,9.73,2005
+Kalimantan Selatan,54062,10.63,19.49,2006
+Kalimantan Selatan,29622,5.88,10.78,2007
+Kalimantan Selatan,18724,3.31,6.06,2008
+Kalimantan Selatan,60524,10.94,20.05,2009
+Kalimantan Selatan,26238,4.52,8.3,2010
+Kalimantan Selatan,48320,8.99,16.49,2011
+Kalimantan Selatan,66894,11.73,21.51,2012
+Kalimantan Selatan,35990,6.19,11.34,2013
+Kalimantan Selatan,66431,10.96,20.09,2014
+Kalimantan Selatan,73472,12.95,23.75,2015
+Kalimantan Selatan,65880,12.72,23.33,2016
+Kalimantan Selatan,37516,7.53,13.81,2017
+Kalimantan Selatan,37607,7.31,13.4,2018
+Kalimantan Tengah,64137,16.03,29.38,2001
+Kalimantan Tengah,103000,23.18,42.49,2002
+Kalimantan Tengah,129231,27.71,50.79,2003
+Kalimantan Tengah,169993,36.29,66.53,2004
+Kalimantan Tengah,158690,36.48,66.88,2005
+Kalimantan Tengah,222054,46.84,85.88,2006
+Kalimantan Tengah,291881,62.58,114.74,2007
+Kalimantan Tengah,204786,47.04,86.23,2008
+Kalimantan Tengah,194527,42.17,77.31,2009
+Kalimantan Tengah,142435,34.89,63.96,2010
+Kalimantan Tengah,139444,29.93,54.87,2011
+Kalimantan Tengah,219047,49.9,91.48,2012
+Kalimantan Tengah,103352,23.04,42.24,2013
+Kalimantan Tengah,197358,39.92,73.19,2014
+Kalimantan Tengah,213987,40.45,74.16,2015
+Kalimantan Tengah,493304,96.58,177.06,2016
+Kalimantan Tengah,102961,22.96,42.1,2017
+Kalimantan Tengah,110423,22.91,42,2018
+Kalimantan Timur,73147,17.86,32.75,2001
+Kalimantan Timur,81107,19.99,36.64,2002
+Kalimantan Timur,53674,13.74,25.19,2003
+Kalimantan Timur,107934,27.57,50.55,2004
+Kalimantan Timur,90711,22.89,41.96,2005
+Kalimantan Timur,152425,36.1,66.19,2006
+Kalimantan Timur,152743,35.92,65.85,2007
+Kalimantan Timur,145025,35,64.17,2008
+Kalimantan Timur,263360,63.19,115.85,2009
+Kalimantan Timur,137263,33.64,61.68,2010
+Kalimantan Timur,223992,56.25,103.13,2011
+Kalimantan Timur,316219,80.25,147.12,2012
+Kalimantan Timur,179440,45.35,83.14,2013
+Kalimantan Timur,270630,67.84,124.38,2014
+Kalimantan Timur,231763,56.65,103.86,2015
+Kalimantan Timur,352728,77.12,141.39,2016
+Kalimantan Timur,168120,40.37,74,2017
+Kalimantan Timur,184517,47.45,86.99,2018
+Kepulauan Riau,1720,0.38,0.69,2001
+Kepulauan Riau,5531,1.19,2.17,2002
+Kepulauan Riau,1777,0.41,0.74,2003
+Kepulauan Riau,4536,1.01,1.85,2004
+Kepulauan Riau,8096,1.78,3.25,2005
+Kepulauan Riau,5437,1.24,2.27,2006
+Kepulauan Riau,2691,0.55,1.02,2007
+Kepulauan Riau,8711,1.91,3.5,2008
+Kepulauan Riau,5237,1.16,2.13,2009
+Kepulauan Riau,4803,1,1.83,2010
+Kepulauan Riau,6951,1.54,2.83,2011
+Kepulauan Riau,9381,2.13,3.9,2012
+Kepulauan Riau,4763,1.07,1.95,2013
+Kepulauan Riau,19239,4.28,7.85,2014
+Kepulauan Riau,5875,1.15,2.1,2015
+Kepulauan Riau,13070,2.33,4.26,2016
+Kepulauan Riau,7999,1.45,2.66,2017
+Kepulauan Riau,6270,1.13,2.07,2018
+Lampung,10365,2.33,4.28,2001
+Lampung,9381,2.03,3.72,2002
+Lampung,4996,1.09,2,2003
+Lampung,10542,2.24,4.11,2004
+Lampung,9341,1.7,3.12,2005
+Lampung,14063,2.64,4.85,2006
+Lampung,15605,2.94,5.39,2007
+Lampung,16188,3.32,6.08,2008
+Lampung,23167,4.22,7.74,2009
+Lampung,14112,2.57,4.72,2010
+Lampung,16788,3.14,5.76,2011
+Lampung,30374,5,9.16,2012
+Lampung,5155,0.94,1.73,2013
+Lampung,11376,2.03,3.73,2014
+Lampung,14153,2.41,4.41,2015
+Lampung,16281,2.72,4.99,2016
+Lampung,11775,2.14,3.92,2017
+Lampung,10352,1.74,3.19,2018
+Maluku,4546,1.3,2.38,2001
+Maluku,14615,4.35,7.97,2002
+Maluku,4314,1.29,2.36,2003
+Maluku,7384,2.16,3.96,2004
+Maluku,5617,1.64,3.01,2005
+Maluku,12439,3.73,6.84,2006
+Maluku,4466,1.31,2.39,2007
+Maluku,2944,0.82,1.51,2008
+Maluku,13447,3.87,7.09,2009
+Maluku,4403,1.32,2.42,2010
+Maluku,9409,2.75,5.04,2011
+Maluku,11395,3.33,6.11,2012
+Maluku,4680,1.33,2.44,2013
+Maluku,15253,3.78,6.93,2014
+Maluku,49006,14.56,26.68,2015
+Maluku,27649,8.25,15.13,2016
+Maluku,7344,2.14,3.93,2017
+Maluku,11203,3.19,5.85,2018
+Maluku Utara,7356,2.26,4.15,2001
+Maluku Utara,23417,7.25,13.28,2002
+Maluku Utara,10042,3.26,5.98,2003
+Maluku Utara,12050,3.79,6.95,2004
+Maluku Utara,6423,2.05,3.75,2005
+Maluku Utara,16123,5.04,9.24,2006
+Maluku Utara,5356,1.66,3.04,2007
+Maluku Utara,4965,1.53,2.81,2008
+Maluku Utara,13493,4.07,7.46,2009
+Maluku Utara,6074,1.91,3.51,2010
+Maluku Utara,5749,1.74,3.2,2011
+Maluku Utara,9022,2.68,4.92,2012
+Maluku Utara,6784,2.05,3.76,2013
+Maluku Utara,17989,5.42,9.93,2014
+Maluku Utara,45469,13.64,25.01,2015
+Maluku Utara,26875,8.52,15.61,2016
+Maluku Utara,10598,3.18,5.84,2017
+Maluku Utara,12381,3.6,6.6,2018
+Nusa Tenggara Barat,2886,0.74,1.35,2001
+Nusa Tenggara Barat,2676,0.65,1.19,2002
+Nusa Tenggara Barat,1721,0.41,0.75,2003
+Nusa Tenggara Barat,4565,1.1,2.02,2004
+Nusa Tenggara Barat,2038,0.5,0.91,2005
+Nusa Tenggara Barat,2486,0.57,1.04,2006
+Nusa Tenggara Barat,1993,0.46,0.85,2007
+Nusa Tenggara Barat,2734,0.59,1.07,2008
+Nusa Tenggara Barat,1954,0.43,0.78,2009
+Nusa Tenggara Barat,1145,0.28,0.51,2010
+Nusa Tenggara Barat,2329,0.49,0.89,2011
+Nusa Tenggara Barat,3121,0.74,1.35,2012
+Nusa Tenggara Barat,1542,0.3,0.56,2013
+Nusa Tenggara Barat,7151,1.39,2.55,2014
+Nusa Tenggara Barat,4437,0.9,1.65,2015
+Nusa Tenggara Barat,4030,0.83,1.52,2016
+Nusa Tenggara Barat,6206,1.24,2.28,2017
+Nusa Tenggara Barat,8155,1.64,3.01,2018
+Nusa Tenggara Timur,4727,1.12,2.06,2001
+Nusa Tenggara Timur,4613,1.06,1.95,2002
+Nusa Tenggara Timur,3849,0.88,1.61,2003
+Nusa Tenggara Timur,4694,1.03,1.89,2004
+Nusa Tenggara Timur,5057,1.12,2.06,2005
+Nusa Tenggara Timur,6993,1.53,2.81,2006
+Nusa Tenggara Timur,5036,1.06,1.94,2007
+Nusa Tenggara Timur,4454,0.95,1.74,2008
+Nusa Tenggara Timur,5921,1.28,2.35,2009
+Nusa Tenggara Timur,1783,0.4,0.73,2010
+Nusa Tenggara Timur,7821,1.59,2.92,2011
+Nusa Tenggara Timur,4658,1.06,1.94,2012
+Nusa Tenggara Timur,2107,0.37,0.69,2013
+Nusa Tenggara Timur,9180,1.6,2.94,2014
+Nusa Tenggara Timur,7426,1.3,2.38,2015
+Nusa Tenggara Timur,7373,1.29,2.36,2016
+Nusa Tenggara Timur,10359,1.83,3.36,2017
+Nusa Tenggara Timur,5186,0.91,1.67,2018
+Papua,12604,3.69,6.77,2001
+Papua,20503,5.71,10.47,2002
+Papua,11743,3.4,6.24,2003
+Papua,19150,5.66,10.37,2004
+Papua,14740,4.16,7.63,2005
+Papua,21322,6.33,11.6,2006
+Papua,21151,6.5,11.92,2007
+Papua,15567,4.68,8.58,2008
+Papua,23149,6.59,12.09,2009
+Papua,25708,7.71,14.13,2010
+Papua,23171,7.34,13.45,2011
+Papua,46735,14.95,27.41,2012
+Papua,38030,12.1,22.18,2013
+Papua,58811,18.43,33.79,2014
+Papua,82081,22.85,41.9,2015
+Papua,83109,22.21,40.72,2016
+Papua,49647,14.45,26.48,2017
+Papua,34794,10.36,18.99,2018
+Papua Barat,6089,1.99,3.64,2001
+Papua Barat,14781,4.45,8.17,2002
+Papua Barat,7258,2.29,4.2,2003
+Papua Barat,12251,4.08,7.49,2004
+Papua Barat,7094,2.33,4.27,2005
+Papua Barat,11069,3.56,6.53,2006
+Papua Barat,6656,2.24,4.1,2007
+Papua Barat,7898,2.6,4.77,2008
+Papua Barat,14445,4.72,8.65,2009
+Papua Barat,11702,3.85,7.06,2010
+Papua Barat,11553,3.9,7.15,2011
+Papua Barat,13574,4.47,8.19,2012
+Papua Barat,7912,2.57,4.7,2013
+Papua Barat,17939,5.67,10.39,2014
+Papua Barat,42519,13.16,24.13,2015
+Papua Barat,26848,8.19,15.01,2016
+Papua Barat,15907,4.88,8.95,2017
+Papua Barat,20543,6.44,11.81,2018
+Riau,156639,36.41,66.75,2001
+Riau,154715,34.39,63.05,2002
+Riau,57283,12.76,23.39,2003
+Riau,270849,62.26,114.15,2004
+Riau,355676,80.13,146.91,2005
+Riau,202347,45.37,83.18,2006
+Riau,212218,48.56,89.02,2007
+Riau,204754,48.11,88.19,2008
+Riau,248216,58.21,106.72,2009
+Riau,342330,80.36,147.33,2010
+Riau,255514,61.67,113.07,2011
+Riau,347031,81.6,149.59,2012
+Riau,156487,36.24,66.45,2013
+Riau,283009,61.01,111.85,2014
+Riau,90868,19.04,34.91,2015
+Riau,147229,28.89,52.97,2016
+Riau,123810,22.38,41.03,2017
+Riau,101210,17.97,32.94,2018
+Sulawesi Barat,16407,4.5,8.25,2001
+Sulawesi Barat,12114,3.27,5.99,2002
+Sulawesi Barat,6888,2.01,3.69,2003
+Sulawesi Barat,15744,4.37,8.01,2004
+Sulawesi Barat,9402,2.68,4.91,2005
+Sulawesi Barat,11493,3.32,6.08,2006
+Sulawesi Barat,4153,1.18,2.17,2007
+Sulawesi Barat,12546,3.24,5.94,2008
+Sulawesi Barat,11863,3.09,5.67,2009
+Sulawesi Barat,7199,1.91,3.5,2010
+Sulawesi Barat,13864,3.32,6.09,2011
+Sulawesi Barat,13558,3.37,6.17,2012
+Sulawesi Barat,8076,2.01,3.69,2013
+Sulawesi Barat,14222,3.24,5.95,2014
+Sulawesi Barat,14065,3.25,5.95,2015
+Sulawesi Barat,13690,3.22,5.9,2016
+Sulawesi Barat,12571,2.96,5.42,2017
+Sulawesi Barat,12985,2.98,5.46,2018
+Sulawesi Selatan,8497,2.07,3.79,2001
+Sulawesi Selatan,12741,3.27,5.99,2002
+Sulawesi Selatan,5990,1.58,2.89,2003
+Sulawesi Selatan,17855,4.36,7.99,2004
+Sulawesi Selatan,8581,2.12,3.89,2005
+Sulawesi Selatan,13902,3.34,6.13,2006
+Sulawesi Selatan,9539,2.19,4.01,2007
+Sulawesi Selatan,8138,1.69,3.09,2008
+Sulawesi Selatan,23409,5.05,9.25,2009
+Sulawesi Selatan,8411,1.76,3.23,2010
+Sulawesi Selatan,14404,3.13,5.74,2011
+Sulawesi Selatan,16146,3.78,6.94,2012
+Sulawesi Selatan,9012,2.02,3.7,2013
+Sulawesi Selatan,21492,5.1,9.35,2014
+Sulawesi Selatan,28100,7.25,13.3,2015
+Sulawesi Selatan,30919,8.27,15.15,2016
+Sulawesi Selatan,24074,5.49,10.06,2017
+Sulawesi Selatan,19462,4.2,7.69,2018
+Sulawesi Tengah,17561,4.98,9.14,2001
+Sulawesi Tengah,33203,9.73,17.84,2002
+Sulawesi Tengah,20149,5.99,10.99,2003
+Sulawesi Tengah,40190,11.55,21.18,2004
+Sulawesi Tengah,18088,5.32,9.75,2005
+Sulawesi Tengah,30665,8.84,16.2,2006
+Sulawesi Tengah,20367,5.76,10.55,2007
+Sulawesi Tengah,16747,4.59,8.42,2008
+Sulawesi Tengah,52473,14.01,25.69,2009
+Sulawesi Tengah,21992,6.07,11.13,2010
+Sulawesi Tengah,26216,7.2,13.21,2011
+Sulawesi Tengah,37199,10.7,19.62,2012
+Sulawesi Tengah,28532,8.15,14.94,2013
+Sulawesi Tengah,46803,12.17,22.31,2014
+Sulawesi Tengah,92014,25.87,47.43,2015
+Sulawesi Tengah,74331,20.52,37.62,2016
+Sulawesi Tengah,36981,9.38,17.21,2017
+Sulawesi Tengah,37565,9.51,17.43,2018
+Sulawesi Tenggara,15956,4.02,7.38,2001
+Sulawesi Tenggara,15866,4.11,7.53,2002
+Sulawesi Tenggara,13433,3.78,6.93,2003
+Sulawesi Tenggara,41637,11.68,21.41,2004
+Sulawesi Tenggara,16428,4.57,8.38,2005
+Sulawesi Tenggara,44411,11.52,21.13,2006
+Sulawesi Tenggara,9989,2.76,5.06,2007
+Sulawesi Tenggara,8706,2.23,4.08,2008
+Sulawesi Tenggara,30117,7.49,13.73,2009
+Sulawesi Tenggara,7635,2.11,3.88,2010
+Sulawesi Tenggara,22967,5.56,10.19,2011
+Sulawesi Tenggara,23063,5.83,10.68,2012
+Sulawesi Tenggara,15499,3.79,6.95,2013
+Sulawesi Tenggara,39743,9.02,16.53,2014
+Sulawesi Tenggara,43568,10.58,19.4,2015
+Sulawesi Tenggara,38476,10.34,18.95,2016
+Sulawesi Tenggara,27155,6.6,12.09,2017
+Sulawesi Tenggara,24226,5.56,10.2,2018
+Sulawesi Utara,4527,1.35,2.47,2001
+Sulawesi Utara,7695,2.34,4.3,2002
+Sulawesi Utara,2913,0.95,1.74,2003
+Sulawesi Utara,6852,2.11,3.86,2004
+Sulawesi Utara,3477,1.07,1.96,2005
+Sulawesi Utara,4903,1.44,2.63,2006
+Sulawesi Utara,4284,1.26,2.32,2007
+Sulawesi Utara,1611,0.46,0.83,2008
+Sulawesi Utara,7010,1.93,3.54,2009
+Sulawesi Utara,2042,0.56,1.03,2010
+Sulawesi Utara,3123,0.87,1.59,2011
+Sulawesi Utara,2677,0.71,1.3,2012
+Sulawesi Utara,1719,0.47,0.85,2013
+Sulawesi Utara,6890,1.8,3.3,2014
+Sulawesi Utara,15613,4.5,8.25,2015
+Sulawesi Utara,8810,2.45,4.5,2016
+Sulawesi Utara,5793,1.55,2.84,2017
+Sulawesi Utara,7470,1.89,3.47,2018
+Sumatera Barat,15038,3.98,7.3,2001
+Sumatera Barat,15401,4.17,7.65,2002
+Sumatera Barat,9853,2.68,4.91,2003
+Sumatera Barat,26569,6.68,12.25,2004
+Sumatera Barat,29307,7.72,14.15,2005
+Sumatera Barat,32748,8.8,16.13,2006
+Sumatera Barat,31722,8.07,14.8,2007
+Sumatera Barat,34068,9.09,16.66,2008
+Sumatera Barat,40593,10.71,19.63,2009
+Sumatera Barat,22997,6.15,11.28,2010
+Sumatera Barat,42639,11.4,20.89,2011
+Sumatera Barat,36599,10.58,19.39,2012
+Sumatera Barat,22477,6.2,11.37,2013
+Sumatera Barat,30603,8.37,15.35,2014
+Sumatera Barat,22544,6.25,11.46,2015
+Sumatera Barat,39228,10.52,19.28,2016
+Sumatera Barat,51568,13.95,25.58,2017
+Sumatera Barat,37433,9.83,18.02,2018
+Sumatera Selatan,59112,12.05,22.1,2001
+Sumatera Selatan,66042,11.47,21.03,2002
+Sumatera Selatan,30731,5.2,9.53,2003
+Sumatera Selatan,102281,17.79,32.62,2004
+Sumatera Selatan,87490,14.49,26.56,2005
+Sumatera Selatan,170515,27.16,49.8,2006
+Sumatera Selatan,174139,24.37,44.68,2007
+Sumatera Selatan,189442,31.42,57.6,2008
+Sumatera Selatan,201671,32.43,59.46,2009
+Sumatera Selatan,120316,19.89,36.46,2010
+Sumatera Selatan,132477,21.95,40.25,2011
+Sumatera Selatan,361721,58.15,106.6,2012
+Sumatera Selatan,101083,16.18,29.66,2013
+Sumatera Selatan,159704,24.75,45.37,2014
+Sumatera Selatan,169195,22.46,41.18,2015
+Sumatera Selatan,275974,41.54,76.16,2016
+Sumatera Selatan,124778,16.75,30.7,2017
+Sumatera Selatan,125584,18.39,33.72,2018
+Sumatera Utara,54425,12.2,22.38,2001
+Sumatera Utara,39801,8.97,16.44,2002
+Sumatera Utara,37546,8.81,16.16,2003
+Sumatera Utara,72506,16.24,29.78,2004
+Sumatera Utara,74653,16.99,31.15,2005
+Sumatera Utara,66846,15.28,28.02,2006
+Sumatera Utara,52515,11.72,21.49,2007
+Sumatera Utara,65795,16.15,29.6,2008
+Sumatera Utara,121245,28.43,52.13,2009
+Sumatera Utara,93501,20.86,38.24,2010
+Sumatera Utara,100695,24.21,44.38,2011
+Sumatera Utara,89443,20.83,38.19,2012
+Sumatera Utara,53354,12.13,22.23,2013
+Sumatera Utara,85638,19.23,35.26,2014
+Sumatera Utara,53129,11.65,21.36,2015
+Sumatera Utara,79430,16.49,30.22,2016
+Sumatera Utara,74692,16.09,29.49,2017
+Sumatera Utara,66314,13.13,24.07,2018
+Yogyakarta,82,0.02,0.03,2001
+Yogyakarta,32,0.01,0.01,2002
+Yogyakarta,9,0,0,2003
+Yogyakarta,71,0.01,0.02,2004
+Yogyakarta,15,0,0.01,2005
+Yogyakarta,61,0.01,0.02,2006
+Yogyakarta,21,0,0.01,2007
+Yogyakarta,27,0.01,0.01,2008
+Yogyakarta,25,0.01,0.01,2009
+Yogyakarta,141,0.04,0.07,2010
+Yogyakarta,173,0.04,0.08,2011
+Yogyakarta,55,0.01,0.02,2012
+Yogyakarta,27,0,0.01,2013
+Yogyakarta,57,0.01,0.02,2014
+Yogyakarta,42,0.01,0.01,2015
+Yogyakarta,66,0.01,0.02,2016
+Yogyakarta,108,0.02,0.03,2017
+Yogyakarta,139,0.02,0.04,2018
