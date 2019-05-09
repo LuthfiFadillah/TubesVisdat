@@ -75,7 +75,7 @@ app = dash.Dash(__name__)
 app.layout = html.Div([
     html.Div([
         dcc.Graph(id="my-graph")
-    ], className="map", style = {"width": "70%"}),
+    ], className="map", style = {"width": "60%"}),
     html.Div([
         dcc.Slider(
         id='my-slider',
@@ -91,7 +91,7 @@ app.layout = html.Div([
             2018 : '2018'
         }
         )
-    ],className="row", style={"width":"70%", "textAlign":"center", "padding-left":"6%"}),
+    ],className="row", style={"width":"56%", "textAlign":"center", "padding-left":"6%", "padding-bottom":"30px"}),
     html.Div([
         html.Label('Select Province'),
         dcc.Dropdown(
@@ -138,11 +138,10 @@ app.layout = html.Div([
         dcc.RadioItems(
                 id='select-chart',
                 options=[
-                {'label': 'Tree Cover Loss', 'value': 'Tree Cover Loss'},
                 {'label': 'Biomass Loss', 'value': 'Biomass Loss'},
                 {'label': 'CO2 Emissions', 'value': 'CO2 Emissions'}
                 ],
-                value='Tree Cover Loss',
+                value='Biomass Loss',
                 labelStyle={'display': 'inline-block'}
             )
         ],style={'width': '600px', 'display': 'inline-block'}),
@@ -200,10 +199,12 @@ def update_figure(selected):
                  mode='markers',
                  marker=dict(size=1, color=facecolor),
                  showlegend=False,
-                 hoverinfo='text'
+                 hoverinfo='text',
                 )
 
-    layers=[dict(sourcetype = 'geojson',
+    title = "Deforestation in Indonesia Year " + str(selected)
+    layers=[dict(
+    			sourcetype = 'geojson',
                  source = sources[k],
                  below = 'water',
                  type = 'fill',   
@@ -213,13 +214,13 @@ def update_figure(selected):
 
 
 
-    layout = dict(title=selected,
-                  font=dict(family='Balto'),
+    layout = dict(font=dict(family='Balto'),
                   autosize=False,
-                  width=1100,
-                  height=600,
+                  width=900,
+                  height=450,
                   hovermode='closest',
        
+				  title=title,
                   mapbox=dict(accesstoken=mapbox_access_token,
                               layers=layers,
                               bearing=0,
@@ -227,7 +228,7 @@ def update_figure(selected):
                               lat=-2.6, 
                               lon=118),
                               pitch=0,
-                              zoom=3.8,
+                              zoom=3.5,
                         ) 
                   )
 
@@ -248,18 +249,17 @@ def update_figure(selected):
 def update_figure(selected_province, selected_chart):
     filtered_df = df_def[df_def.province == selected_province]
     traces = []
-    if selected_chart == 'Tree Cover Loss':
-        traces.append(go.Scatter(
-        x=filtered_df['year'],
-        y=filtered_df['tc'],
-        mode='lines+markers',
-        opacity=0.7,
-        marker={
-            'size': 15,
-            'line': {'width': 0.5, 'color': 'white'}
-            },
-        ))
-    elif selected_chart=='Biomass Loss':
+    traces.append(go.Scatter(
+    x=filtered_df['year'],
+    y=filtered_df['tc'],
+    mode='lines+markers',
+    opacity=0.7,
+    marker={
+        'size': 15,
+        'line': {'width': 0.5, 'color': 'white'}
+        },
+    ))
+    if selected_chart=='Biomass Loss':
         traces.append(go.Scatter(
         x=filtered_df['year'],
         y=filtered_df['biomass'],
@@ -269,6 +269,7 @@ def update_figure(selected_province, selected_chart):
             'size': 15,
             'line': {'width': 0.5, 'color': 'white'}
             },
+        yaxis='y2'
         ))
     else:
         traces.append(go.Scatter(
@@ -280,13 +281,17 @@ def update_figure(selected_province, selected_chart):
             'size': 15,
             'line': {'width': 0.5, 'color': 'white'}
             },
+        yaxis='y2'
         ))
-
+    print(traces)
     return {
         'data': traces,
         'layout': go.Layout(
             xaxis={'type': 'log', 'title': 'Year'},
-            yaxis={'title': selected_chart},
+            yaxis={'title': 'Tree Cover Loss'},
+            yaxis2={'title': selected_chart,
+            		'overlaying': 'y',
+            		'side': 'right'},
             margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
             legend={'x': 0, 'y': 1},
             hovermode='closest'
