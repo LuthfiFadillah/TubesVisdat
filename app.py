@@ -12,6 +12,12 @@ from dash.dependencies import Input, Output
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 mapbox_access_token = 'pk.eyJ1IjoidGlmYWhudXJyIiwiYSI6ImNqdmFtcjNlNzBlZHE0ZWw5eG94bHF1aG8ifQ.jqDIvTaqJKnNaI7Gqogvow'
 
+colors = {
+	'background_green': 'rgb(160, 169, 42)',
+	'light': 'rgb(245, 245, 221)',
+	'dark': 'rgb(72, 59, 24)'
+}
+
 def get_color_for_val(val, vmin, vmax, pl_colorscale):
     if vmin >= vmax:
         raise ValueError('vmin should be < vmax')
@@ -73,90 +79,99 @@ for k in range(len(geoJSON['features'])):
 
 # layout
 app.layout = html.Div([
-    html.Div([
-        html.Div([
-            dcc.Graph(id="my-graph")
-        ], className="map"),
-        html.Div([
-            dcc.Slider(
-                id='my-slider',
-                min=2001,
-                max=2018,
-                step=1,
-                value=2018,
-                marks={
-                    2001 : '2001',
-                    2005 : '2005',
-                    2010 : '2010',
-                    2015 : '2015',
-                    2018 : '2018'
-                }
-            )
-        ],className="row", style={"width":"56%", "margin":"auto"}),
-    ]),
-    html.Div([
-        html.Div([
-            html.Label('Select Province'),
-            dcc.Dropdown(
-                id='select-province',
-                options=[
-                    {'label': 'Indonesia', 'value': 'Indonesia'},
-                    {'label': 'Aceh', 'value': 'Aceh'},
-                    {'label': 'Bali', 'value': 'Bali'},
-                    {'label': 'Bangka Belitung', 'value': 'Bangka Belitung'},
-                    {'label': 'Banten', 'value': 'Banten'},
-                    {'label': 'Bengkulu', 'value': 'Bengkulu'},
-                    {'label': 'Gorontalo', 'value': 'Gorontalo'},
-                    {'label': 'Jakarta Raya', 'value': 'Jakarta Raya'},
-                    {'label': 'Jambi', 'value': 'Jambi'},
-                    {'label': 'Jawa Barat', 'value': 'Jawa Barat'},
-                    {'label': 'Jawa Tengah', 'value': 'Jawa Tengah'},
-                    {'label': 'Jawa Timur', 'value': 'Jawa Timur'},
-                    {'label': 'Kalimantan Barat', 'value': 'Kalimantan Barat'},
-                    {'label': 'Kalimantan Selatan', 'value': 'Kalimantan Selatan'},
-                    {'label': 'Kalimantan Tengah', 'value': 'Kalimantan Tengah'},
-                    {'label': 'Kalimantan Timur', 'value': 'Kalimantan Timur'},
-                    {'label': 'Kepulauan Riau', 'value': 'Kepulauan Riau'},
-                    {'label': 'Lampung', 'value': 'Lampung'},
-                    {'label': 'Maluku', 'value': 'Maluku'},
-                    {'label': 'Maluku Utara', 'value': 'Maluku Utara'},
-                    {'label': 'Nusa Tenggara Barat', 'value': 'Nusa Tenggara Barat'},
-                    {'label': 'Nusa Tenggara Timur', 'value': 'Nusa Tenggara Timur'},
-                    {'label': 'Papua', 'value': 'Papua'},
-                    {'label': 'Papua Barat', 'value':'Papua Barat'},
-                    {'label': 'Riau', 'value': 'Riau'},
-                    {'label': 'Sulawesi Barat', 'value': 'Sulawesi Barat'},
-                    {'label': 'Sulawesi Selatan', 'value': 'Sulawesi Selatan'},
-                    {'label': 'Sulawesi Tengah', 'value': 'Sulawesi Tengah'},
-                    {'label': 'Sulawesi Tenggara', 'value': 'Sulawesi Tenggara'},
-                    {'label': 'Sulawesi Utara', 'value': 'Sulawesi Utara'},
-                    {'label': 'Sumatera Barat', 'value': 'Sumatera Barat'},
-                    {'label': 'Sumatera Selatan', 'value': 'Sumatera Selatan'},
-                    {'label': 'Sumatera Utara', 'value': 'Sumatera Utara'},
-                    {'label': 'Yogyakarta', 'value': 'Yogyakarta'}
-                ],
-                value='Aceh', style={'width': '200px'}
-        )], style={'columnCount' :1, 'padding-top': '5%'}),
-        html.Div([
-            dcc.RadioItems(
-                    id='select-chart',
-                    options=[
-                    {'label': 'Biomass Loss', 'value': 'Biomass Loss'},
-                    {'label': 'CO2 Emissions', 'value': 'CO2 Emissions'}
-                    ],
-                    value='Biomass Loss',
-                    labelStyle={'display': 'inline-block'}
-                )
-            ],style={'width': '600px', 'display': 'inline-block'}),
-        html.Div([
-            dcc.Graph(id='time-series')
-        ],style={'width': '70%', 'float': 'left'}),
-        html.Div(id="slideshow-container", children=[
-            html.Div(id="content"),
-            dcc.Interval(id="interval", interval=3000),
-        ],style={'width': '28%', 'float': 'right'})
-    ])    
-], className="container")
+	html.Div([
+	    html.Div([
+	        html.Div([
+	            dcc.Graph(id="my-graph")
+	        ], className="map", style={'width': '100%', 'background-color':colors['background_green'], 'color':colors['dark']}),
+	        html.Div([
+	            dcc.Slider(
+	                id='my-slider',
+	                min=2001,
+	                max=2018,
+	                step=1,
+	                value=2018,
+	                marks={
+	                    2001 : {'label': '2001', 'style': {'color':colors['light']}},
+	                    2005 : {'label': '2005', 'style': {'color':colors['light']}},
+	                    2010 : {'label': '2010', 'style': {'color':colors['light']}},
+	                    2015 : {'label': '2015', 'style': {'color':colors['light']}},
+	                    2018 : {'label': '2018', 'style': {'color':colors['light']}}
+	                }
+	            )
+	        ],className="row", style={"width":"60%", "margin":"auto"}),
+	    ], style={'width':'55%', 'float':'left', 'background-color': colors['background_green']}),
+	    html.Div([
+		    html.Div(id="slideshow-container", children=[
+			    html.Div(id="content"),
+			    dcc.Interval(id="interval", interval=3000),
+			],style={'width': '100%', 'background-color':colors['background_green'],'color':colors['light']}),
+		    html.Div([
+		        html.Div([
+		            html.Label('Select Province'),
+		            dcc.Dropdown(
+		                id='select-province',
+		                options=[
+		                    {'label': 'Indonesia', 'value': 'Indonesia'},
+		                    {'label': 'Aceh', 'value': 'Aceh'},
+		                    {'label': 'Bali', 'value': 'Bali'},
+		                    {'label': 'Bangka Belitung', 'value': 'Bangka Belitung'},
+		                    {'label': 'Banten', 'value': 'Banten'},
+		                    {'label': 'Bengkulu', 'value': 'Bengkulu'},
+		                    {'label': 'Gorontalo', 'value': 'Gorontalo'},
+		                    {'label': 'Jakarta Raya', 'value': 'Jakarta Raya'},
+		                    {'label': 'Jambi', 'value': 'Jambi'},
+		                    {'label': 'Jawa Barat', 'value': 'Jawa Barat'},
+		                    {'label': 'Jawa Tengah', 'value': 'Jawa Tengah'},
+		                    {'label': 'Jawa Timur', 'value': 'Jawa Timur'},
+		                    {'label': 'Kalimantan Barat', 'value': 'Kalimantan Barat'},
+		                    {'label': 'Kalimantan Selatan', 'value': 'Kalimantan Selatan'},
+		                    {'label': 'Kalimantan Tengah', 'value': 'Kalimantan Tengah'},
+		                    {'label': 'Kalimantan Timur', 'value': 'Kalimantan Timur'},
+		                    {'label': 'Kepulauan Riau', 'value': 'Kepulauan Riau'},
+		                    {'label': 'Lampung', 'value': 'Lampung'},
+		                    {'label': 'Maluku', 'value': 'Maluku'},
+		                    {'label': 'Maluku Utara', 'value': 'Maluku Utara'},
+		                    {'label': 'Nusa Tenggara Barat', 'value': 'Nusa Tenggara Barat'},
+		                    {'label': 'Nusa Tenggara Timur', 'value': 'Nusa Tenggara Timur'},
+		                    {'label': 'Papua', 'value': 'Papua'},
+		                    {'label': 'Papua Barat', 'value':'Papua Barat'},
+		                    {'label': 'Riau', 'value': 'Riau'},
+		                    {'label': 'Sulawesi Barat', 'value': 'Sulawesi Barat'},
+		                    {'label': 'Sulawesi Selatan', 'value': 'Sulawesi Selatan'},
+		                    {'label': 'Sulawesi Tengah', 'value': 'Sulawesi Tengah'},
+		                    {'label': 'Sulawesi Tenggara', 'value': 'Sulawesi Tenggara'},
+		                    {'label': 'Sulawesi Utara', 'value': 'Sulawesi Utara'},
+		                    {'label': 'Sumatera Barat', 'value': 'Sumatera Barat'},
+		                    {'label': 'Sumatera Selatan', 'value': 'Sumatera Selatan'},
+		                    {'label': 'Sumatera Utara', 'value': 'Sumatera Utara'},
+		                    {'label': 'Yogyakarta', 'value': 'Yogyakarta'}
+		                ],
+		                value='Indonesia', style={'width': '200px', 'color':colors['dark']}
+		        )], style={'columnCount' :1, 'padding-top': '1%', 'background-color': colors['background_green'],
+		            		'color': colors['light'], 'float':'right', 'padding-right':'10px'}),
+		        html.Div([
+		            dcc.RadioItems(
+		                    id='select-chart',
+		                    options=[
+		                    {'label': 'Biomass Loss', 'value': 'Biomass Loss'},
+		                    {'label': 'CO2 Emissions', 'value': 'CO2 Emissions'}
+		                    ],
+		                    value='Biomass Loss',
+		                    labelStyle={'display': 'inline-block', 'color':colors['light'], 'float':'right', 'padding-right':'10px'}
+		                )
+		            ],style={'width': '100%', 'display': 'inline-block', 'background-color': colors['background_green'], 'float':'right'}),
+		        html.Div([
+		            dcc.Graph(id='time-series')
+		        ],style={'width': '100%', 'float': 'left', 'background-color':colors['background_green'], 'height':'30%'})
+		        
+		    ], style={'width':'100%', 'float':'left'})
+		], style={'float':'right', 'width': '45%'})
+
+    ], style={'width':'100%','background-color': colors['background_green'], 'display':'flex'}),
+       
+], className="container", style={'width':'100%','background-color':colors['background_green'], 
+			'height': '100%', 'display':'flex', 'margin': '0', 'padding':'0'})
 
 #callback
 @app.callback(
@@ -199,8 +214,11 @@ def update_figure(selected):
                  color =facecolor[k],
                  opacity=0.8
                 ) for k in range(len(sources))]
-    layout = dict(font=dict(family='Balto'),
-                  autosize=False,
+    layout = dict(font=dict(
+    				family='Balto',
+    				color=colors['light'],
+    				size='17'),
+                  autosize=True,
                   hovermode='closest',
        
 				  title=title,
@@ -211,8 +229,10 @@ def update_figure(selected):
                               lat=-2.6, 
                               lon=118),
                               pitch=0,
-                              zoom=3.5,
-                        ) 
+                              zoom=3.1,
+                        ),
+                  paper_bgcolor=colors['background_green'],
+                  plot_bgcolor=colors['light']
                   )
     return {
         "data": [Idn],
@@ -231,21 +251,26 @@ def update_figure(selected_province, selected_chart):
     x=filtered_df['year'],
     y=filtered_df['tc'],
     mode='lines+markers',
+    name='Tree Cover Loss',
     opacity=0.7,
     marker={
         'size': 15,
-        'line': {'width': 0.5, 'color': 'white'}
+        'line': {'width': 0.5, 'color': colors['background_green']},
+		'color': colors['background_green']
         },
     ))
+    yaxis2_scale = '(MegaTons)'
     if selected_chart=='Biomass Loss':
         traces.append(go.Scatter(
         x=filtered_df['year'],
         y=filtered_df['biomass'],
         mode='lines+markers',
+        name=selected_chart,
         opacity=0.7,
         marker={
             'size': 15,
-            'line': {'width': 0.5, 'color': 'white'}
+            'line': {'width': 0.5, 'color': colors['dark']},
+            'color': colors['dark']
             },
         yaxis='y2'
         ))
@@ -254,10 +279,12 @@ def update_figure(selected_province, selected_chart):
         x=filtered_df['year'],
         y=filtered_df['co2'],
         mode='lines+markers',
+        name=selected_chart,
         opacity=0.7,
         marker={
             'size': 15,
-            'line': {'width': 0.5, 'color': 'white'}
+            'line': {'width': 0.5, 'color': colors['dark']},
+            'color': colors['dark']
             },
         yaxis='y2'
         ))
@@ -265,13 +292,19 @@ def update_figure(selected_province, selected_chart):
         'data': traces,
         'layout': go.Layout(
             xaxis={'type': 'log', 'title': 'Year'},
-            yaxis={'title': 'Tree Cover Loss'},
-            yaxis2={'title': selected_chart,
+            yaxis={'title': 'Tree Cover Loss (Ha)'},
+            yaxis2={'title': selected_chart + ' ' + yaxis2_scale,
             		'overlaying': 'y',
             		'side': 'right'},
-            margin={'l': 40, 'b': 40, 't': 10, 'r': 40},
+            margin={'b': 40, 't': 10},
             legend={'x': 0, 'y': 1},
-            hovermode='closest'
+            height=250,
+            hovermode='closest',
+            paper_bgcolor=colors['light'],
+            plot_bgcolor=colors['light'],
+            font={
+            	'color':colors['dark']
+            }
         )
     }
 
@@ -280,7 +313,7 @@ def update_figure(selected_province, selected_chart):
 def display_image(n):
     if n == None or n % 3 == 1:
         content = html.Div([
-            dcc.Markdown('''## In **2018**, the top 5 regions responsible for **55.85%** Indonesia's Tree Cover Loss'''),
+            dcc.Markdown('''#### In **2018**, the top 5 regions responsible for **55.85%** Indonesia's Tree Cover Loss'''),
             dcc.Markdown('''* 1. Kalimantan Timur   184.517 ha'''),
             dcc.Markdown('''* 2. Kalimantan Barat   159.429 ha'''),
             dcc.Markdown('''* 3. Sumatera Selatan   125.584'''),
@@ -289,7 +322,7 @@ def display_image(n):
             ])
     elif n % 3 == 2:
         content = html.Div([
-            dcc.Markdown('''## In **2018**, the top 5 regions responsible for **52.86%** Indonesia's Biomass Loss'''),
+            dcc.Markdown('''#### In **2018**, the top 5 regions responsible for **52.86%** Indonesia's Biomass Loss'''),
             dcc.Markdown('''* 1. Kalimantan Timur   47,45 Mt'''),
             dcc.Markdown('''* 2. Kalimantan Barat   31,69 Mt'''),
             dcc.Markdown('''* 3. Kalimantan Tengah   22,91 Mt'''),
@@ -298,7 +331,7 @@ def display_image(n):
             ])
     elif n % 3 == 0:
         content = html.Div([
-            dcc.Markdown('''## In **2018**, the top 5 regions responsible for **52.87%** Indonesia's CO2 Emissions'''),
+            dcc.Markdown('''#### In **2018**, the top 5 regions responsible for **52.87%** Indonesia's CO2 Emissions'''),
             dcc.Markdown('''* 1. Kalimantan Timur   86,99 Mt'''),
             dcc.Markdown('''* 2. Kalimantan Barat   58,1 Mt'''),
             dcc.Markdown('''* 3. Kalimantan Tengah   42 Mt'''),
