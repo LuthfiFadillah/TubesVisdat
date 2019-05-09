@@ -38,6 +38,7 @@ def get_color_for_val(val, vmin, vmax, pl_colorscale):
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
+# Load map and csv
 df_def = pd.read_csv(
     'deforestation.csv')
 
@@ -70,27 +71,28 @@ for k in range(len(geoJSON['features'])):
     lons.append(lontotal / len(county_coords))
     lats.append(lattotal / len(county_coords))
 
+# layout
 app.layout = html.Div([
     html.Div([
         html.Div([
-        dcc.Graph(id="my-graph")
-        ], className="map", style = {"width": "60%"}),
+            dcc.Graph(id="my-graph")
+        ], className="map"),
         html.Div([
-        dcc.Slider(
-        id='my-slider',
-        min=2001,
-        max=2018,
-        step=1,
-        value=2018,
-        marks={
-            2001 : '2001',
-            2005 : '2005',
-            2010 : '2010',
-            2015 : '2015',
-            2018 : '2018'
-        }
-        )
-        ],className="row", style={"width":"56%", "textAlign":"center", "padding-left":"6%", "padding-bottom":"30px"}),
+            dcc.Slider(
+                id='my-slider',
+                min=2001,
+                max=2018,
+                step=1,
+                value=2018,
+                marks={
+                    2001 : '2001',
+                    2005 : '2005',
+                    2010 : '2010',
+                    2015 : '2015',
+                    2018 : '2018'
+                }
+            )
+        ],className="row", style={"width":"56%", "margin":"auto"}),
     ]),
     html.Div([
         html.Div([
@@ -152,29 +154,11 @@ app.layout = html.Div([
         html.Div(id="slideshow-container", children=[
             html.Div(id="content"),
             dcc.Interval(id="interval", interval=3000),
-            #dcc.Markdown('''## In **2018**, the top 5 regions responsible for **55.85%** Indonesia's Tree Cover Loss'''),
-            #dcc.Markdown('''* 1. Kalimantan Timur   184.517 ha'''),
-            #dcc.Markdown('''* 2. Kalimantan Barat   159.429 ha'''),
-            #dcc.Markdown('''* 3. Sumatera Selatan   125.584'''),
-            #dcc.Markdown('''* 4. Kalimantan Tengah   110.423 ha'''),
-            #dcc.Markdown('''* 5. Riau   101.210 ha'''),
-            #dcc.Markdown('''## In **2018**, the top 5 regions responsible for **52.86%** Indonesia's Biomass Loss'''),
-            #dcc.Markdown('''* 1. Kalimantan Timur   47,45 Mt'''),
-            #dcc.Markdown('''* 2. Kalimantan Barat   31,69 Mt'''),
-            #dcc.Markdown('''* 3. Kalimantan Tengah   22,91 Mt'''),
-            #dcc.Markdown('''* 4. Sumatera Selatan   18,39 Mt'''),
-            #dcc.Markdown('''* 5. Riau   17,97 Mt'''),
-            #dcc.Markdown('''## In **2018**, the top 5 regions responsible for **52.87%** Indonesia's CO2 Emissions'''),
-            #dcc.Markdown('''* 1. Kalimantan Timur   86,99 Mt'''),
-            #dcc.Markdown('''* 2. Kalimantan Barat   58,1 Mt'''),
-            #dcc.Markdown('''* 3. Kalimantan Tengah   42 Mt'''),
-            #dcc.Markdown('''* 4. Sumatera Selatan   33,72 Mt'''),
-            #dcc.Markdown('''* 5. Riau   32,94 Mt''')
-        ],style={'width': '30%', 'float': 'right'})
+        ],style={'width': '28%', 'float': 'right'})
     ])    
 ], className="container")
 
-
+#callback
 @app.callback(
     Output("my-graph", "figure"),
     [Input("my-slider", "value")]
@@ -215,13 +199,8 @@ def update_figure(selected):
                  color =facecolor[k],
                  opacity=0.8
                 ) for k in range(len(sources))]
-
-
-
     layout = dict(font=dict(family='Balto'),
                   autosize=False,
-                  width=900,
-                  height=450,
                   hovermode='closest',
        
 				  title=title,
@@ -235,14 +214,9 @@ def update_figure(selected):
                               zoom=3.5,
                         ) 
                   )
-
-
-
-    # fig = dict(data=[Idn], layout=layout)
     return {
         "data": [Idn],
         "layout": layout
-
     }
 
 @app.callback(
@@ -287,7 +261,6 @@ def update_figure(selected_province, selected_chart):
             },
         yaxis='y2'
         ))
-    print(traces)
     return {
         'data': traces,
         'layout': go.Layout(
@@ -296,7 +269,7 @@ def update_figure(selected_province, selected_chart):
             yaxis2={'title': selected_chart,
             		'overlaying': 'y',
             		'side': 'right'},
-            margin={'l': 40, 'b': 40, 't': 10, 'r': 10},
+            margin={'l': 40, 'b': 40, 't': 10, 'r': 40},
             legend={'x': 0, 'y': 1},
             hovermode='closest'
         )
@@ -336,7 +309,7 @@ def display_image(n):
         content = "None"
     return content
 
-server = app.server # the Flask app
+server = app.server
 
 if __name__ == '__main__':
     app.run_server(debug=True)
