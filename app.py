@@ -70,8 +70,6 @@ for k in range(len(geoJSON['features'])):
     lons.append(lontotal / len(county_coords))
     lats.append(lattotal / len(county_coords))
 
-app = dash.Dash(__name__)
-
 app.layout = html.Div([
     html.Div([
         dcc.Graph(id="my-graph")
@@ -133,7 +131,7 @@ app.layout = html.Div([
                 {'label': 'Yogyakarta', 'value': 'Yogyakarta'}
             ],
             value='Aceh', style={'width': '200px'}
-    )], style={'columnCount' :1}),
+    )], style={'columnCount' :1, 'padding-top': '5%'}),
     html.Div([
         dcc.RadioItems(
                 id='select-chart',
